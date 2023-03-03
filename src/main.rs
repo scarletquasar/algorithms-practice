@@ -29,6 +29,8 @@ fn quicksort(arr: Vec<i32>) -> Vec<i32> {
         return arr;
     }
 
+    let b: Vec<String> = arr.into_iter().map(|x| x).map(|x| x.to_string()).collect();
+
     let pivot_index = &mut rand::thread_rng();
     let pivot = *arr.choose(pivot_index).unwrap();
 
